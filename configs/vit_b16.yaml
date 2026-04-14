@@ -1,0 +1,9 @@
+model:
+  name: vit_b16
+  timm_name: vit_base_patch16_224
+  input_size: 224
+
+batch_size: 16
+
+optimizer:
+  weight_decay: 0.05

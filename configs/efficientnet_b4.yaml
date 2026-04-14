@@ -1,0 +1,4 @@
+model:
+  name: efficientnet_b4
+  timm_name: tf_efficientnet_b4_ns
+  input_size: 380

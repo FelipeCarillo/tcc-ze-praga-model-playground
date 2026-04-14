@@ -1,0 +1,32 @@
+seed: 42
+num_classes: 29  # confirmar após EDA do Digipathos
+batch_size: 32
+num_workers: 4
+epochs_warmup: 3
+epochs_total: 30
+patience_early_stop: 7
+
+optimizer:
+  name: adamw
+  weight_decay: 1.0e-4
+
+scheduler:
+  name: cosine_with_warmup
+  warmup_steps_ratio: 0.1
+
+loss:
+  name: cross_entropy
+  label_smoothing: 0.1
+  class_weights: balanced
+
+mixed_precision: true
+gradient_clip_norm: 1.0
+
+logging:
+  tensorboard_dir: artifacts/tensorboard
+  log_every_n_steps: 20
+
+checkpoint:
+  monitor: val_f1_macro
+  mode: max
+  save_top_k: 1
