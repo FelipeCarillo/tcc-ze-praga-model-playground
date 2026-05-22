@@ -1,5 +1,5 @@
 seed: 42
-num_classes: 29  # confirmar após EDA do Digipathos
+num_classes: 8  # soja: oidio, mancha_alvo, ferrugem_mancha_alvo, folha_carijo, septoria, saudavel, mancha_mirotecio, murcha_esclerocio
 batch_size: 32
 num_workers: 4
 epochs_warmup: 3
