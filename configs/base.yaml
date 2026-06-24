@@ -1,5 +1,5 @@
 seed: 42
-num_classes: 29  # confirmar após EDA do Digipathos
+num_classes: 6  # 5 doenças foliares + saudável (ADR-0001)
 batch_size: 32
 num_workers: 4
 epochs_warmup: 3

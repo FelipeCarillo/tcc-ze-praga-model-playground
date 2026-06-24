@@ -57,7 +57,7 @@ class CheckpointCallback:
             ckpt_path = self.save_dir / f"best_{self.model_name}.pth"
             torch.save(self.best_weights, ckpt_path)
             logger.info(
-                f"Checkpoint salvo (epoch {epoch}) | {self.monitor}={value:.4f} → {ckpt_path}"
+                f"Checkpoint salvo (epoch {epoch}) | {self.monitor}={value:.4f} -> {ckpt_path}"
             )
         return improved
 

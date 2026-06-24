@@ -58,13 +58,11 @@ tcc-ze-praga-model-playground/
 │       ├── config.py           # load_config / load_model_config (deep merge)
 │       └── logger.py           # get_logger
 ├── notebooks/
-│   ├── 00_setup_colab.ipynb
-│   ├── 01_eda.ipynb
-│   ├── 02_train_resnet50.ipynb
-│   ├── 03_train_efficientnet_b4.ipynb
-│   ├── 04_train_vit_b16.ipynb
-│   ├── 05_evaluation_compare.ipynb
-│   └── 06_export_onnx.ipynb
+│   ├── 00_dataset_preparation.ipynb   # EDA + cobertura por classe + splits 70/15/15
+│   ├── 01_train_resnet50.ipynb        # treino ResNet-50 (passo a passo)
+│   ├── 02_train_efficientnet.ipynb    # treino EfficientNet-B4
+│   ├── 03_train_vit.ipynb             # treino ViT-B/16
+│   └── 04_export_onnx.ipynb           # export ONNX + validação de paridade
 ├── data/
 │   ├── raw/digipathos/         # imagens brutas: <classe>/*.jpg
 │   └── processed/              # train.csv, val.csv, test.csv, label_map.csv
@@ -154,13 +152,13 @@ Isso cria `data/processed/train.csv`, `val.csv`, `test.csv` e `label_map.csv` co
 
 | Notebook | Descrição |
 |----------|-----------|
-| `00_setup_colab.ipynb` | Verificação de ambiente e dependências |
-| `01_eda.ipynb` | Análise exploratória do Digipathos (distribuição de classes, amostras) |
-| `02_train_resnet50.ipynb` | Treinamento do ResNet-50 |
-| `03_train_efficientnet_b4.ipynb` | Treinamento do EfficientNet-B4 |
-| `04_train_vit_b16.ipynb` | Treinamento do ViT-B/16 |
-| `05_evaluation_compare.ipynb` | Comparação dos 3 modelos no test set + confusion matrices |
-| `06_export_onnx.ipynb` | Exportação ONNX + validação de paridade numérica |
+| `00_dataset_preparation.ipynb` | EDA + cobertura por classe + geração dos splits 70/15/15 (CSVs) |
+| `01_train_resnet50.ipynb` | Treinamento do ResNet-50 (passo a passo) |
+| `02_train_efficientnet.ipynb` | Treinamento do EfficientNet-B4 |
+| `03_train_vit.ipynb` | Treinamento do ViT-B/16 |
+| `04_export_onnx.ipynb` | Exportação ONNX + validação de paridade numérica |
+
+> Cada notebook de treino já inclui setup do Colab, avaliação no test set, matriz de confusão e relatório por classe — pronto para apresentação.
 
 ### Passo 7 — Ou usar os scripts CLI diretamente
 

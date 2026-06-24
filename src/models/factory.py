@@ -2,9 +2,9 @@
 Fábrica de modelos — cria qualquer arquitetura via timm com interface uniforme.
 
 Mapeamento:
-  resnet50        → timm 'resnet50'
-  efficientnet_b4 → timm 'tf_efficientnet_b4_ns'
-  vit_b16         → timm 'vit_base_patch16_224'
+  resnet50        -> timm 'resnet50'
+  efficientnet_b4 -> timm 'tf_efficientnet_b4_ns'
+  vit_b16         -> timm 'vit_base_patch16_224'
 """
 
 import timm

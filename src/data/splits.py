@@ -75,7 +75,7 @@ def generate_splits(raw_dir: Path, out_dir: Path) -> None:
             writer.writerow(["filepath", "label", "label_idx"])
             for fp, lbl, idx in zip(fps, lbls, idxs):
                 writer.writerow([str(fp), lbl, idx])
-        print(f"[splits] {split_name}: {len(fps)} amostras → {csv_path}")
+        print(f"[splits] {split_name}: {len(fps)} amostras -> {csv_path}")
 
     label_map_path = out_dir / "label_map.csv"
     with label_map_path.open("w", newline="", encoding="utf-8") as f:

@@ -205,3 +205,13 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# ─── Zé Praga: dados e artefatos pesados (não versionar) ───
+# Dataset ASDID (~36 GB) — baixar do Zenodo 7304859, ver README.
+/data/
+# Checkpoints (.pth), ONNX e logs do TensorBoard são grandes/regeneráveis.
+/artifacts/checkpoints/
+/artifacts/onnx/
+/artifacts/tensorboard/
+# Métricas (JSON), figuras (matriz de confusão) e RESULTS.md FICAM versionados
+# (são leves e servem de evidência pro TCC).

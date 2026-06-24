@@ -5,7 +5,7 @@ import torch.nn as nn
 from .factory import build_model, freeze_backbone, unfreeze_backbone
 
 
-def build_efficientnet_b4(num_classes: int = 29, pretrained: bool = True) -> nn.Module:
+def build_efficientnet_b4(num_classes: int = 6, pretrained: bool = True) -> nn.Module:
     """Constrói EfficientNet-B4 (noisy-student) com head para num_classes."""
     return build_model("efficientnet_b4", num_classes=num_classes, pretrained=pretrained)
 
