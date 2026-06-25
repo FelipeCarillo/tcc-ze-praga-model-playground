@@ -1,0 +1,26 @@
+{
+  "model": "ensemble",
+  "members": ["resnet50", "efficientnet_b4", "vit_b16"],
+  "strategy": "soft-voting (media das probabilidades softmax)",
+  "n_test": 1221,
+  "accuracy": 0.991,
+  "f1_macro": 0.9917,
+  "latency_ms_cpu_batch1": 1234.1,
+  "per_member_accuracy_serving_preprocess": {
+    "resnet50": 0.9615,
+    "efficientnet_b4": 0.9861,
+    "vit_b16": 0.982
+  },
+  "confusion_matrix_pct": {
+    "labels": ["cercosporiose", "ferrugem-asiatica", "mancha-alvo", "mancha-olho-de-ra", "mildio", "saudavel"],
+    "rows_true_cols_pred": [
+      [100, 0, 0, 0, 0, 0],
+      [0, 99, 0, 0, 0, 0],
+      [0, 1, 98, 1, 0, 1],
+      [0, 0, 0, 100, 0, 0],
+      [0, 0, 0, 0, 100, 0],
+      [0, 0, 0, 1, 0, 99]
+    ]
+  },
+  "note": "Avaliado no split de teste do ASDID com o pre-processamento de serving (resize bilinear + normalizacao ImageNet, igual ao OnnxClassifier do backend). Accuracy/F1 oficiais por modelo individual estao em metrics_<modelo>.json."
+}

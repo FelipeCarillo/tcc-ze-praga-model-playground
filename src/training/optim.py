@@ -53,7 +53,7 @@ def build_warmup_cosine_scheduler(
     Scheduler com warmup linear seguido de decaimento cosine.
 
     Args:
-        warmup_steps: Número de steps de warmup linear (0 → lr_max).
+        warmup_steps: Número de steps de warmup linear (0 -> lr_max).
         total_steps: Total de steps de treinamento.
 
     Returns:

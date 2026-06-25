@@ -1,0 +1,59 @@
+{
+  "model": "efficientnet_b4",
+  "accuracy": 0.9877149877149877,
+  "f1_macro": 0.9882049896935888,
+  "f1_weighted": 0.9877324404968124,
+  "precision_macro": 0.9896481893782562,
+  "recall_macro": 0.9868918686524183,
+  "per_class": {
+    "cercosporiose": {
+      "precision": 1.0,
+      "recall": 0.9916666666666667,
+      "f1-score": 0.99581589958159,
+      "support": 240.0
+    },
+    "ferrugem-asiatica": {
+      "precision": 0.991869918699187,
+      "recall": 1.0,
+      "f1-score": 0.9959183673469387,
+      "support": 244.0
+    },
+    "mancha-alvo": {
+      "precision": 1.0,
+      "recall": 0.9691358024691358,
+      "f1-score": 0.9843260188087775,
+      "support": 162.0
+    },
+    "mancha-olho-de-ra": {
+      "precision": 0.9702127659574468,
+      "recall": 0.987012987012987,
+      "f1-score": 0.9785407725321889,
+      "support": 231.0
+    },
+    "mildio": {
+      "precision": 1.0,
+      "recall": 0.9897959183673469,
+      "f1-score": 0.9948717948717949,
+      "support": 98.0
+    },
+    "saudavel": {
+      "precision": 0.9758064516129032,
+      "recall": 0.983739837398374,
+      "f1-score": 0.979757085020243,
+      "support": 246.0
+    },
+    "accuracy": 0.9877149877149877,
+    "macro avg": {
+      "precision": 0.9896481893782562,
+      "recall": 0.9868918686524183,
+      "f1-score": 0.9882049896935888,
+      "support": 1221.0
+    },
+    "weighted avg": {
+      "precision": 0.9878655169496691,
+      "recall": 0.9877149877149877,
+      "f1-score": 0.9877324404968124,
+      "support": 1221.0
+    }
+  }
+}
